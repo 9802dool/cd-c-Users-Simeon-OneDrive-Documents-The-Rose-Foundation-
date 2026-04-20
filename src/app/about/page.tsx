@@ -30,12 +30,20 @@ export default function AboutPage() {
           networks, and celebrating stories of perseverance.
         </p>
       </div>
-      <Link
-        href="/services"
-        className="mt-10 inline-flex rounded-xl bg-rose px-6 py-3 text-sm font-semibold text-white hover:bg-rose-deep"
-      >
-        View services
-      </Link>
+      <div className="mt-10 flex flex-wrap gap-3">
+        <Link
+          href="/board-of-directors"
+          className="inline-flex rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold shadow-sm hover:border-rose/25"
+        >
+          Board of Directors
+        </Link>
+        <Link
+          href="/services"
+          className="inline-flex rounded-xl bg-rose px-6 py-3 text-sm font-semibold text-white hover:bg-rose-deep"
+        >
+          View services
+        </Link>
+      </div>
     </div>
   );
 }

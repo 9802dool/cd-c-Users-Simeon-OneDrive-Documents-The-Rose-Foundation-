@@ -4,6 +4,7 @@ import { projects, site } from "@/lib/site";
 const browse = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/board-of-directors", label: "Board of Directors" },
   { href: "/services", label: "Services" },
   { href: "/projects", label: "Projects" },
   { href: "/covid-19-response", label: "COVID-19 Response" },

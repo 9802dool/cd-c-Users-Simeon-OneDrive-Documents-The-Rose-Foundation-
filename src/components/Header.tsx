@@ -11,7 +11,10 @@ const nav = [
   {
     href: "/about",
     label: "About",
-    children: [{ href: "/services", label: "Services" }],
+    children: [
+      { href: "/services", label: "Services" },
+      { href: "/board-of-directors", label: "Board" },
+    ],
   },
   { href: "/projects", label: "Projects" },
   { href: "/covid-19-response", label: "COVID-19 Response" },
