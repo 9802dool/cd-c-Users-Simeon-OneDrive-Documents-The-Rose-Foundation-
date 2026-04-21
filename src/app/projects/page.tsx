@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="mx-auto max-w-6xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div className="rf-container min-w-0 py-12 sm:py-16 lg:py-20">
       <SectionHeading
         eyebrow="Projects"
         title="Programmes across the Foundation"
         description="Each project reflects a facet of our mission: widening opportunity, strengthening local economies, and honouring resilience."
       />
-      <ul className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2">
+      <ul className="rf-fluid-cols-2 mt-10 sm:mt-14">
         {projects.map((p) => (
           <li key={p.slug}>
             <Link

@@ -16,7 +16,7 @@ export default function HomePage() {
               "radial-gradient(900px 500px at 15% 10%, color-mix(in oklab, var(--rose) 35%, transparent), transparent 55%), radial-gradient(700px 420px at 85% 30%, color-mix(in oklab, var(--gold) 22%, transparent), transparent 50%)",
           }}
         />
-        <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+        <div className="relative rf-container py-12 sm:py-20 lg:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-rose">
             #{site.name.replace(/\s/g, "")}
           </p>
@@ -58,7 +58,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="rf-container py-12 sm:py-16 lg:py-20">
         <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:gap-16 lg:items-start">
           <SectionHeading
             eyebrow="COVID-19 Response"
@@ -82,13 +82,13 @@ export default function HomePage() {
       </section>
 
       <section className="border-y border-border bg-cream/50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="rf-container py-12 sm:py-16 lg:py-20">
           <SectionHeading
             eyebrow="Latest projects"
             title="Initiatives that nurture enterprise, learning, and hope"
             description="From grassroots commerce to online learning, our programmes meet people where they are—with structure, mentorship, and heart."
           />
-          <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="rf-fluid-cols-4 mt-12">
             {featured.map((p) => (
               <li key={p.slug}>
                 <Link
@@ -119,7 +119,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <section className="rf-container py-12 sm:py-16 lg:py-20">
         <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <SectionHeading

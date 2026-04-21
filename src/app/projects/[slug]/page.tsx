@@ -25,7 +25,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   if (!project) notFound();
 
   return (
-    <div className="mx-auto max-w-3xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div className="rf-container rf-container--prose min-w-0 py-12 sm:py-16 lg:py-20">
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose">
         Projects
       </p>

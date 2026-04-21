@@ -15,7 +15,7 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-border bg-[#1a1210] text-[#f5f0ea]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:py-14 lg:grid-cols-3 lg:px-8">
+      <div className="rf-container grid gap-10 py-12 sm:py-14 lg:grid-cols-3">
         <div className="min-w-0">
           <p className="font-serif text-xl font-semibold text-white sm:text-2xl">
             {site.name}
@@ -78,7 +78,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <div className="rf-container flex flex-col gap-2 py-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {site.founded}–{year} {site.name}. All rights reserved.
           </p>

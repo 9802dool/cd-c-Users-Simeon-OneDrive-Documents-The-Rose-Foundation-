@@ -63,7 +63,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 pt-[env(safe-area-inset-top,0)] backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3.5 sm:gap-4 sm:px-6 sm:py-4 lg:px-8">
+      <div className="rf-container flex items-center justify-between gap-3 py-3.5 sm:gap-4 sm:py-4">
         <Link
           href="/"
           className="group flex min-w-0 shrink-0 items-center"
@@ -74,9 +74,9 @@ export function Header() {
             alt={site.name}
             width={480}
             height={165}
-            className="h-11 w-auto max-w-[min(62vw,22rem)] object-contain object-left sm:h-12 sm:max-w-[26rem] md:h-14 md:max-w-[30rem] lg:h-16 lg:max-w-[34rem]"
+            className="h-11 w-auto max-w-full object-contain object-left sm:h-12 sm:max-w-[min(100%,26rem)] md:h-14 md:max-w-[min(100%,30rem)] lg:h-16 lg:max-w-[min(100%,34rem)]"
             priority
-            sizes="(max-width: 640px) 62vw, (max-width: 1024px) 50vw, 480px"
+            sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, min(480px, 100vw)"
           />
         </Link>
 
@@ -155,9 +155,9 @@ export function Header() {
       {open ? (
         <div
           id="mobile-nav"
-          className="border-t border-border bg-background px-4 py-4 lg:hidden"
+          className="border-t border-border bg-background py-4 lg:hidden"
         >
-          <div className="mx-auto flex max-w-6xl flex-col gap-1">
+          <div className="rf-container flex flex-col gap-1">
             {nav.map((item) => (
               <div key={item.href} className="flex flex-col gap-1">
                 <Link

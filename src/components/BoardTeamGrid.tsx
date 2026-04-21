@@ -46,11 +46,11 @@ export function BoardTeamGrid() {
   return (
     <>
       <section className="bg-transparent py-8 sm:py-10">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="rf-container">
           <p className="mb-8 max-w-2xl text-sm font-medium text-muted">
             Tap or click a photo to open a short biography.
           </p>
-          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="rf-fluid-cols-3">
             {boardMembers.map((person, index) => (
               <li
                 key={person.slug}

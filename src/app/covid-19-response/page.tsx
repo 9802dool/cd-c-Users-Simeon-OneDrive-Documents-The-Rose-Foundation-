@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function CovidPage() {
   return (
-    <div className="mx-auto max-w-3xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <div className="rf-container rf-container--prose min-w-0 py-12 sm:py-16 lg:py-20">
       <SectionHeading
         eyebrow="COVID-19 Response"
         title="Kindness at scale when it mattered most"
