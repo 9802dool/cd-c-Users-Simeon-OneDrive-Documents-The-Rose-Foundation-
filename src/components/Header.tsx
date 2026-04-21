@@ -63,7 +63,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6 sm:py-4 lg:px-8">
         <Link
           href="/"
           className="group flex min-w-0 shrink-0 items-center"
@@ -72,11 +72,11 @@ export function Header() {
           <Image
             src="/rose-foundation-logo.png"
             alt={site.name}
-            width={320}
-            height={110}
-            className="h-9 w-auto max-w-[min(55vw,18rem)] object-contain object-left sm:h-10 sm:max-w-[20rem] md:h-11 lg:max-w-none"
+            width={480}
+            height={165}
+            className="h-11 w-auto max-w-[min(62vw,22rem)] object-contain object-left sm:h-12 sm:max-w-[26rem] md:h-14 md:max-w-[30rem] lg:h-16 lg:max-w-[34rem]"
             priority
-            sizes="(max-width: 768px) 55vw, 320px"
+            sizes="(max-width: 640px) 62vw, (max-width: 1024px) 50vw, 480px"
           />
         </Link>
 
