@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Newsletter } from "@/components/Newsletter";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -16,45 +17,62 @@ export default function HomePage() {
               "radial-gradient(900px 500px at 15% 10%, color-mix(in oklab, var(--rose) 35%, transparent), transparent 55%), radial-gradient(700px 420px at 85% 30%, color-mix(in oklab, var(--gold) 22%, transparent), transparent 50%)",
           }}
         />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-rose">
-            #{site.name.replace(/\s/g, "")}
-          </p>
-          <h1 className="mt-4 max-w-4xl font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            The Realisation of{" "}
-            <span className="text-rose">Selfless Expression</span>.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Amidst the world changes of {site.founded}, The Rose Foundation was
-            birthed in a time of cosmic transition. Global paradigm shifts created
-            uncertainty in an era when the value of everything was questioned.
-            Beyond time and space this clarion call of our collective
-            consciousness was heard, and from a celestial experience The Rose
-            Foundation emerged to provide hope and a pathway to selfless
-            service.
-          </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link
-              href="/about"
-              className="inline-flex items-center justify-center rounded-xl bg-rose px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-rose/20 transition hover:bg-rose-deep"
-            >
-              Learn more
-            </Link>
-            <Link
-              href="/projects"
-              className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-6 py-3.5 text-sm font-semibold text-foreground shadow-sm transition hover:border-rose/25"
-            >
-              Explore projects
-            </Link>
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:py-28 lg:px-8">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-14 xl:gap-20">
+            <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-[min(100%,420px)] lg:flex-shrink-0">
+              <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0b0b0c] p-6 shadow-[0_24px_60px_-16px_rgba(0,0,0,0.35)] ring-1 ring-rose/15 sm:p-8">
+                <Image
+                  src="/rose-foundation-logo.png"
+                  alt={`${site.name} logo`}
+                  width={560}
+                  height={180}
+                  className="h-auto w-full object-contain"
+                  priority
+                  sizes="(max-width: 1024px) min(100vw - 2rem, 28rem), 420px"
+                />
+              </div>
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-rose">
+                #{site.name.replace(/\s/g, "")}
+              </p>
+              <h1 className="mt-4 max-w-4xl font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+                The Realisation of{" "}
+                <span className="text-rose">Selfless Expression</span>.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+                Amidst the world changes of {site.founded}, The Rose Foundation
+                was birthed in a time of cosmic transition. Global paradigm
+                shifts created uncertainty in an era when the value of everything
+                was questioned. Beyond time and space this clarion call of our
+                collective consciousness was heard, and from a celestial
+                experience The Rose Foundation emerged to provide hope and a
+                pathway to selfless service.
+              </p>
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center justify-center rounded-xl bg-rose px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-rose/20 transition hover:bg-rose-deep"
+                >
+                  Learn more
+                </Link>
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-6 py-3.5 text-sm font-semibold text-foreground shadow-sm transition hover:border-rose/25"
+                >
+                  Explore projects
+                </Link>
+              </div>
+              <p className="mt-10 inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-2 text-sm text-muted shadow-sm backdrop-blur">
+                <span
+                  className="h-2 w-2 rounded-full bg-emerald-500"
+                  aria-hidden
+                />
+                #InThisTogether — community-first programmes across Trinidad
+                &amp; Tobago
+              </p>
+            </div>
           </div>
-          <p className="mt-10 inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-2 text-sm text-muted shadow-sm backdrop-blur">
-            <span
-              className="h-2 w-2 rounded-full bg-emerald-500"
-              aria-hidden
-            />
-            #InThisTogether — community-first programmes across Trinidad &amp;
-            Tobago
-          </p>
         </div>
       </section>
 
