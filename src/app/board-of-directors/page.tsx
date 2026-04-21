@@ -20,7 +20,7 @@ export default function BoardOfDirectorsPage() {
               "radial-gradient(900px 500px at 15% 10%, color-mix(in oklab, var(--rose) 35%, transparent), transparent 55%), radial-gradient(700px 420px at 85% 30%, color-mix(in oklab, var(--gold) 22%, transparent), transparent 50%)",
           }}
         />
-        <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="relative mx-auto max-w-6xl min-w-0 px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
           <p className="mb-4">
             <Link
               href="/"
@@ -41,7 +41,7 @@ export default function BoardOfDirectorsPage() {
           </p>
         </div>
       </section>
-      <section className="border-b border-border py-14">
+      <section className="border-b border-border py-10 sm:py-14">
         <BoardTeamGrid />
       </section>
     </div>

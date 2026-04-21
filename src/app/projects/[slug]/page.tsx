@@ -25,14 +25,14 @@ export default async function ProjectDetailPage({ params }: Props) {
   if (!project) notFound();
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <div className="mx-auto max-w-3xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose">
         Projects
       </p>
-      <h1 className="mt-3 font-serif text-4xl font-semibold tracking-tight text-foreground">
+      <h1 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
         {project.title}
       </h1>
-      <p className="mt-4 text-lg text-muted">{project.short}</p>
+      <p className="mt-4 text-base text-muted sm:text-lg">{project.short}</p>
       <div className="mt-10 space-y-6 text-base leading-relaxed text-muted">
         {project.body.map((para, i) => (
           <p key={i}>{para}</p>

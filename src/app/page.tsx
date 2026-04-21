@@ -16,15 +16,15 @@ export default function HomePage() {
               "radial-gradient(900px 500px at 15% 10%, color-mix(in oklab, var(--rose) 35%, transparent), transparent 55%), radial-gradient(700px 420px at 85% 30%, color-mix(in oklab, var(--gold) 22%, transparent), transparent 50%)",
           }}
         />
-        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:py-28 lg:px-8">
+        <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-rose">
             #{site.name.replace(/\s/g, "")}
           </p>
-          <h1 className="mt-4 max-w-4xl font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 max-w-4xl font-serif text-[clamp(1.875rem,5.5vw+0.75rem,3.75rem)] font-semibold leading-[1.12] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             The Realisation of{" "}
             <span className="text-rose">Selfless Expression</span>.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
             Amidst the world changes of {site.founded}, The Rose Foundation was
             birthed in a time of cosmic transition. Global paradigm shifts
             created uncertainty in an era when the value of everything was
@@ -47,7 +47,7 @@ export default function HomePage() {
               Explore projects
             </Link>
           </div>
-          <p className="mt-10 inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-2 text-sm text-muted shadow-sm backdrop-blur">
+          <p className="mt-10 inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-2 text-xs text-muted shadow-sm backdrop-blur sm:px-4 sm:text-sm">
             <span
               className="h-2 w-2 rounded-full bg-emerald-500"
               aria-hidden
@@ -58,14 +58,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 lg:items-start">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:gap-16 lg:items-start">
           <SectionHeading
             eyebrow="COVID-19 Response"
             title="Standing with the vulnerable"
             description="All over the world, people are stepping up with acts of kindness in response to the Coronavirus pandemic. Learn how The Rose Foundation & BP Trinidad and Tobago are doing our part to help the vulnerable and communities in Trinidad & Tobago."
           />
-          <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
             <p className="text-sm leading-relaxed text-muted">
               Our response focused on practical relief, coordination with
               partners, and clear communication—meeting urgent needs while
@@ -82,7 +82,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-y border-border bg-cream/50">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <SectionHeading
             eyebrow="Latest projects"
             title="Initiatives that nurture enterprise, learning, and hope"
@@ -95,7 +95,7 @@ export default function HomePage() {
                   href={`/projects/${p.slug}`}
                   className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-rose/25 hover:shadow-md"
                 >
-                  <span className="font-serif text-xl font-semibold text-foreground group-hover:text-rose">
+                  <span className="font-serif text-lg font-semibold text-foreground group-hover:text-rose sm:text-xl">
                     {p.title}
                   </span>
                   <span className="mt-3 text-sm leading-relaxed text-muted">
@@ -119,8 +119,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <SectionHeading
               eyebrow="Stay in touch"
@@ -129,9 +129,11 @@ export default function HomePage() {
             />
             <Newsletter />
           </div>
-          <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
-            <h3 className="font-serif text-2xl font-semibold">Contact us</h3>
-            <ul className="mt-4 space-y-3 text-sm text-muted">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
+            <h3 className="font-serif text-xl font-semibold sm:text-2xl">
+              Contact us
+            </h3>
+            <ul className="mt-4 space-y-3 text-sm text-muted break-words">
               <li>{site.address}</li>
               <li>
                 <a

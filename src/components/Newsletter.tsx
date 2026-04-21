@@ -29,7 +29,7 @@ export function Newsletter() {
       </div>
       <button
         type="submit"
-        className="inline-flex items-center justify-center rounded-xl bg-rose px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-rose-deep"
+        className="inline-flex min-h-11 w-full shrink-0 items-center justify-center rounded-xl bg-rose px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-rose-deep sm:w-auto"
       >
         {sent ? "Thank you" : "Send"}
       </button>

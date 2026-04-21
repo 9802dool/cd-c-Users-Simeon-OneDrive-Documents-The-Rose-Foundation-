@@ -11,20 +11,20 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <div className="mx-auto max-w-6xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <SectionHeading
         eyebrow="Projects"
         title="Programmes across the Foundation"
         description="Each project reflects a facet of our mission: widening opportunity, strengthening local economies, and honouring resilience."
       />
-      <ul className="mt-14 grid gap-6 sm:grid-cols-2">
+      <ul className="mt-10 grid gap-6 sm:mt-14 sm:grid-cols-2">
         {projects.map((p) => (
           <li key={p.slug}>
             <Link
               href={`/projects/${p.slug}`}
-              className="group flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition hover:-translate-y-0.5 hover:border-rose/25"
+              className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-rose/25 sm:p-8"
             >
-              <h2 className="font-serif text-2xl font-semibold text-foreground group-hover:text-rose">
+              <h2 className="font-serif text-xl font-semibold text-foreground group-hover:text-rose sm:text-2xl">
                 {p.title}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted">{p.short}</p>

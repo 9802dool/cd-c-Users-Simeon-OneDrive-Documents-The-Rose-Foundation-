@@ -29,19 +29,19 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <div className="mx-auto max-w-6xl min-w-0 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <SectionHeading
         eyebrow="Services"
         title="How we work alongside communities"
         description="Our services translate mission into momentum: practical guidance, trusted relationships, and programmes designed for real-world constraints."
       />
-      <ul className="mt-14 grid gap-6 md:grid-cols-2">
+      <ul className="mt-10 grid gap-6 sm:mt-14 md:grid-cols-2">
         {services.map((s) => (
           <li
             key={s.title}
-            className="rounded-2xl border border-border bg-card p-8 shadow-sm"
+            className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8"
           >
-            <h2 className="font-serif text-2xl font-semibold text-foreground">
+            <h2 className="font-serif text-xl font-semibold text-foreground sm:text-2xl">
               {s.title}
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-muted">{s.text}</p>

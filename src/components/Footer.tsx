@@ -15,21 +15,21 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-border bg-[#1a1210] text-[#f5f0ea]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3 lg:px-8">
-        <div>
-          <p className="font-serif text-2xl font-semibold text-white">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:py-14 lg:grid-cols-3 lg:px-8">
+        <div className="min-w-0">
+          <p className="font-serif text-xl font-semibold text-white sm:text-2xl">
             {site.name}
           </p>
-          <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/75">
+          <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/75 break-words">
             {site.tagline}. Serving communities across Trinidad & Tobago since{" "}
             {site.founded}.
           </p>
         </div>
-        <div>
+        <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
             Contact
           </p>
-          <ul className="mt-4 space-y-3 text-sm text-white/85">
+          <ul className="mt-4 space-y-3 text-sm text-white/85 break-words">
             <li>{site.address}</li>
             <li>
               <a
@@ -49,11 +49,11 @@ export function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
             Browse
           </p>
-          <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+          <ul className="mt-4 grid grid-cols-1 gap-x-4 gap-y-2 text-sm sm:grid-cols-2">
             {browse.map((l) => (
               <li key={l.href}>
                 <Link

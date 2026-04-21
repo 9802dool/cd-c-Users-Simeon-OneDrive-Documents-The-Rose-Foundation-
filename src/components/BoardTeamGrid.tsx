@@ -98,7 +98,7 @@ export function BoardTeamGrid() {
             aria-label="Close biography"
             onClick={close}
           />
-          <div className="relative z-10 max-h-[min(92vh,40rem)] w-full max-w-lg overflow-y-auto rounded-2xl border border-border bg-card p-6 pt-12 shadow-lg">
+          <div className="relative z-10 max-h-[min(88dvh,40rem)] w-full max-w-lg overflow-y-auto rounded-2xl border border-border bg-card p-5 pt-11 shadow-lg sm:p-6 sm:pt-12">
             <button
               type="button"
               onClick={close}
