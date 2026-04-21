@@ -66,27 +66,18 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="group flex items-center gap-3 min-w-0"
+          className="group flex min-w-0 shrink-0 items-center"
           aria-label={`${site.name} home`}
         >
-          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-border bg-card shadow-sm">
-            <Image
-              src="https://rosefoundationtt.org/wp-content/uploads/2020/04/Rose-Foundation-Logo.jpg"
-              alt=""
-              fill
-              className="object-cover"
-              sizes="44px"
-              priority
-            />
-          </span>
-          <span className="min-w-0 text-left">
-            <span className="block font-serif text-lg font-semibold leading-tight tracking-tight text-foreground group-hover:text-rose transition-colors">
-              {site.name}
-            </span>
-            <span className="hidden text-xs text-muted sm:block line-clamp-1">
-              {site.tagline}
-            </span>
-          </span>
+          <Image
+            src="/rose-foundation-logo.png"
+            alt={site.name}
+            width={320}
+            height={110}
+            className="h-9 w-auto max-w-[min(55vw,18rem)] object-contain object-left sm:h-10 sm:max-w-[20rem] md:h-11 lg:max-w-none"
+            priority
+            sizes="(max-width: 768px) 55vw, 320px"
+          />
         </Link>
 
         <nav
