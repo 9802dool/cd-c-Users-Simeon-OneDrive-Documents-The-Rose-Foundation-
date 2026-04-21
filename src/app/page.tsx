@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:py-28 lg:px-8">
           <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-14 xl:gap-20">
             <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-[min(100%,420px)] lg:flex-shrink-0">
-              <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0b0b0c] p-6 shadow-[0_24px_60px_-16px_rgba(0,0,0,0.35)] ring-1 ring-rose/15 sm:p-8">
+              <div className="overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-card to-cream/40 p-6 shadow-lg shadow-rose/5 ring-1 ring-rose/10 sm:p-8">
                 <Image
                   src="/rose-foundation-logo.png"
                   alt={`${site.name} logo`}
