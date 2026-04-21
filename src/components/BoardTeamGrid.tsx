@@ -7,6 +7,15 @@ import { boardMembers, type BoardMember } from "@/lib/board";
 const DEFAULT_BIO =
   "A full biography will be posted here soon. Contact the Foundation for more information.";
 
+function portraitImageClass(person: BoardMember, interactive: boolean) {
+  const fit = person.imageFit ?? "contain";
+  const pos = person.imagePosition ?? "center";
+  const posClass = pos === "top" ? "object-top" : "object-center";
+  const base =
+    fit === "cover" ? `object-cover ${posClass}` : `object-contain ${posClass}`;
+  return interactive ? `${base} transition group-hover:opacity-95` : base;
+}
+
 export function BoardTeamGrid() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const dialogTitleId = useId();
@@ -59,11 +68,7 @@ export function BoardTeamGrid() {
                     fill
                     priority={index < 2}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className={
-                      (person.imageFit ?? "contain") === "cover"
-                        ? "object-cover object-center transition group-hover:opacity-95"
-                        : "object-contain object-center transition group-hover:opacity-95"
-                    }
+                    className={portraitImageClass(person, true)}
                   />
                 </button>
                 <div className="flex flex-1 flex-col justify-center border-t border-border bg-cream/30 px-5 py-5 sm:px-6 sm:py-6">
@@ -107,11 +112,7 @@ export function BoardTeamGrid() {
                 alt={member.imageAlt}
                 fill
                 sizes="256px"
-                className={
-                  (member.imageFit ?? "contain") === "cover"
-                    ? "object-cover object-center"
-                    : "object-contain object-center"
-                }
+                className={portraitImageClass(member, false)}
               />
             </div>
             <p className="pr-14 text-xs font-semibold uppercase tracking-[0.12em] text-rose">
