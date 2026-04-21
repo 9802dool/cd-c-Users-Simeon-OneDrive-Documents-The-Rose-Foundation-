@@ -31,8 +31,9 @@ export const boardMembers: BoardMember[] = [
     slug: "marcia-mc-clashie-belgrove",
     name: "Marcia Mc Clashie Belgrove",
     role: "Co-Founder, Director & Corporate Secretary · Spiritual Director",
-    imageSrc: `${uploads}/marcia.jpg`,
+    imageSrc: "/directors/Marcia Mc Clashie Belgrove.png",
     imageAlt: "Portrait of Marcia Mc Clashie Belgrove",
+    imageFit: "cover",
     bio: [
       "Marcia Mc Clashie Belgrove is Co-founder, Director and Corporate Secretary of The Rose Foundation, responsible for ensuring that the organisation’s philosophy of “service to others before self” is maintained. Mrs. Belgrove is a visionary and the Spiritual Director of The Rose Foundation.",
       "Her work in advocating and working for social and economic justice and sustainability in communities earned her a position as facilitator of social and community development in the office of the Prime Minister of Trinidad and Tobago, where she served as advisor to two (2) sitting Prime Ministers of the country. Mrs. Belgrove holds a Master’s in Business Administration (MBA) from the Australian Institute of Business and is also a founder/director of a number of social enterprises.",
