@@ -7,6 +7,8 @@ export type BoardMember = {
   role: string;
   imageSrc: string;
   imageAlt: string;
+  /** How the photo fits the square frame (default: contain). */
+  imageFit?: "contain" | "cover";
   bio: string[];
 };
 
@@ -16,8 +18,9 @@ export const boardMembers: BoardMember[] = [
     slug: "sterling-belgrove",
     name: "Sterling Belgrove",
     role: "Co-Founder & Executive Chairman",
-    imageSrc: `${uploads}/sterling.jpg`,
+    imageSrc: "/directors/Sterling Belgrove.png",
     imageAlt: "Portrait of Sterling Belgrove",
+    imageFit: "cover",
     bio: [
       "Sterling Belgrove is Co-Founder and Executive Chairman of The Rose Foundation for the last twenty-five (25) years. He has a distinguished career in the corporate and non-profit sectors. His work in advocating and working for social and economic justice and sustainability in communities earned him a position as facilitator of social and community development in the office of the Prime Minister of Trinidad and Tobago, where he served as advisor to two (2) sitting Prime Ministers of the country for over twelve (12) years.",
       "Mr. Belgrove has served as a specialist consultant to the World Bank and other multilateral agencies. He is a member of the Lunar Federation and a life member of the International Association of Business Leaders, and currently lectures the MBA programme at his alma mater, Anglia Ruskin University, United Kingdom. He sits as board member and advisor to numerous local and international organisations.",

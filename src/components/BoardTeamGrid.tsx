@@ -59,7 +59,11 @@ export function BoardTeamGrid() {
                     fill
                     priority={index < 2}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-contain object-center transition group-hover:opacity-95"
+                    className={
+                      (person.imageFit ?? "contain") === "cover"
+                        ? "object-cover object-center transition group-hover:opacity-95"
+                        : "object-contain object-center transition group-hover:opacity-95"
+                    }
                   />
                 </button>
                 <div className="flex flex-1 flex-col justify-center border-t border-slate-800 bg-slate-950 px-5 py-5 sm:px-6 sm:py-6">
@@ -103,7 +107,11 @@ export function BoardTeamGrid() {
                 alt={member.imageAlt}
                 fill
                 sizes="256px"
-                className="object-contain object-center"
+                className={
+                  (member.imageFit ?? "contain") === "cover"
+                    ? "object-cover object-center"
+                    : "object-contain object-center"
+                }
               />
             </div>
             <p className="pr-14 text-xs font-semibold uppercase tracking-[0.12em] text-sky-400">
